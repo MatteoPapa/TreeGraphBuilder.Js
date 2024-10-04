@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TreeGraph Builder</title>
+    <link rel="icon" href="./treegraph_builder_logo_small.jpg" type="image/jpeg">
+
+    <!-- Importing Libraries-->
+
+    <!-- Vis.js -->
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"
+    ></script>
+
+    <!-- Papaparse for CSV files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" type="text/css" href="main.css" />
+  </head>
+  <body class="bg-dark">
+    <div id="settings">
+      <form class="d-flex gap-2 flex-column">
+        <label for="file">Select a CSV file:</label>
+        <input type="file" id="file" name="file" accept=".csv" />
+
+        <div class="d-flex gap-2 flex-column">
+          <label class="fw-bold" for="nodeSpacing">Spacing X:</label>
+          <input
+            type="range"
+            id="nodeSpacing"
+            name="nodeSpacing"
+            min="100"
+            max="700"
+            value="200"
+          />
+          <label class="fw-bold">Spacing Y:</label>
+          <input
+            type="range"
+            id="levelSeparation"
+            name="levelSeparation"
+            min="50"
+            max="300"
+            value="100"
+          />
+        </div>
+
+        <!-- Direction -->
+        <label class="fw-bold">Orientation:</label>
+        <div>
+
+          <input type="radio" id="du" name="direction" value="DU" checked />
+          <label for="du">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              fill="currentColor"
+              class="bi bi-arrow-up"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5"
+              />
+            </svg>
+          </label>
+
+          <input type="radio" id="ud" name="direction" value="UD" />
+          <label for="ud">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              fill="currentColor"
+              class="bi bi-arrow-down"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1"
+              />
+            </svg>
+          </label>
+
+<!-- 
+          <input type="radio" id="lr" name="direction" value="LR" />
+          <label for="lr">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              fill="currentColor"
+              class="bi bi-arrow-right"
+              viewBox="0 0 20 20">
+              <path
+                fill-rule="evenodd"
+                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+              />
+            </svg>
+          </label>
+
+          <input type="radio" id="rl" name="direction" value="RL" />
+          <label for="rl">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              fill="currentColor"
+              class="bi bi-arrow-left"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"
+              />
+            </svg>
+          </label> -->
+
+        </div>
+      </form>
+    </div>
+
+    <!--Main tree component-->
+    <div id="mytree" class="d-flex justify-content-center align-items-center">
+      <h3 class="text-danger p-3">Please upload a CSV file that meets the required formatting guidelines to proceed.</h3>
+    </div>
+
+    <script type="text/javascript" src="grapher.js"></script>
+  </body>
+</html>

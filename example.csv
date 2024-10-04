@@ -1,0 +1,30 @@
+parent_id,child_id,parent_name,child_name,weight
+1,2,GlobalTech Group,Innovate Solutions,0.65
+1,3,GlobalTech Group,Quantum Systems,0.7
+1,4,GlobalTech Group,Velocity Enterprises,0.75
+2,5,Innovate Solutions,Metro Networks,0.8
+2,6,Innovate Solutions,Pioneer Labs,0.78
+3,7,Quantum Systems,Vista Technologies,0.82
+3,8,Quantum Systems,Oceanic Innovations,0.75
+4,9,Velocity Enterprises,Hyperion Systems,0.85
+4,10,Velocity Enterprises,Zenith Dynamics,0.8
+5,11,Metro Networks,Nexus Tech,0.7
+5,12,Metro Networks,Prime Solutions,0.72
+6,13,Pioneer Labs,Streamline Networks,0.68
+6,14,Pioneer Labs,Apex Services,0.66
+7,15,Vista Technologies,GlobalWave Technologies,0.78
+7,16,Vista Technologies,Infinity Services,0.82
+8,17,Oceanic Innovations,Blue Horizon Tech,0.76
+8,18,Oceanic Innovations,Skyward Enterprises,0.72
+9,19,Hyperion Systems,Trinity Networks,0.75
+9,20,Hyperion Systems,Centaur Innovations,0.8
+10,21,Zenith Dynamics,Orbit Solutions,0.7
+10,22,Zenith Dynamics,Altair Systems,0.74
+11,23,Nexus Tech,CoreTech Solutions,0.65
+11,24,Nexus Tech,NextGen Services,0.7
+12,25,Prime Solutions,FutureWave Systems,0.68
+12,26,Prime Solutions,StarTech Networks,0.72
+13,27,Streamline Networks,Phoenix Labs,0.66
+13,28,Streamline Networks,EdgeTech Solutions,0.75
+14,29,Apex Services,Vanguard Systems,0.7
+14,30,Apex Services,Dynamic Networks,0.68
