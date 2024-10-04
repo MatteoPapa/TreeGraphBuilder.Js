@@ -1,7 +1,6 @@
 # TreeGraphBuilder.Js
 
-![Screenshot 2024-10-04 170213](https://github.com/user-attachments/assets/bd6afbb7-697c-4d38-a305-84a6abcf7367)
-
+![Screenshot 2024-10-04 170213](https://github.com/user-attachments/assets/b2f5ce8d-46ef-4cb4-bed9-66187451b88f)
 
 
 **TreeGraph Builder** is an interactive visualization tool that uses Javascript for creating hierarchical tree structures from CSV data. It uses `vis.js` for rendering and `PapaParse` for parsing CSV files, enabling users to upload CSV data and visualize the relationships between parent-child nodes in an easily customizable hierarchical layout.
